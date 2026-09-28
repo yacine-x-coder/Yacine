@@ -191,22 +191,17 @@ function App() {
   const [secretOpen, setSecretOpen] = useState<Secret | null>(null);
   const [discovered, setDiscovered] = useState<number[]>([]);
   const [toast, setToast] = useState("");
-  const [logoClicks, setLogoClicks] = useState(0);
-  const [projectClicks, setProjectClicks] = useState<Record<number, number>>(
-    {},
-  );
-  const [footerClicks, setFooterClicks] = useState(0);
-  const [codeClicks, setCodeClicks] = useState(0);
-  const [aboutVisits, setAboutVisits] = useState(0);
-  const [terminalFocus, setTerminalFocus] = useState(0);
-  const [scrollDirection, setScrollDirection] = useState("");
-  const [typedSequence, setTypedSequence] = useState("");
-  const [showClassified, setShowClassified] = useState(false);
+  const [, setLogoClicks] = useState(0);
+  const [, setProjectClicks] = useState<Record<number, number>>({});
+  const [, setFooterClicks] = useState(0);
+  const [, setCodeClicks] = useState(0);
+  const [, setAboutVisits] = useState(0);
+  const [, setTerminalFocus] = useState(0);
+  const [, setTypedSequence] = useState("");
+  const [, setShowClassified] = useState(false);
   const [globeRotation, setGlobeRotation] = useState({ x: -12, y: -22 });
   const [globeDragging, setGlobeDragging] = useState(false);
-
   const globeDragStart = useRef({ x: 0, y: 0, rx: -12, ry: -22 });
-
   const terminalRef = useRef<HTMLDivElement>(null);
 
   /*
